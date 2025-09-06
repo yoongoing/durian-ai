@@ -1,5 +1,5 @@
-# durian-ai
-DurianAI is DataLake AI Agent
+# Durian AI
+Durian AI is DataLake AI Agent
 
 ## 실행 방법
 
@@ -42,3 +42,17 @@ uvicorn app.main:app --reload
 
 * Swagger UI: http://127.0.0.1:8000/docs
 * ReDoc: http://127.0.0.1:8000/redoc
+
+
+## 개발 스펙
+
+이 프로젝트는 다음과 같은 주요 기술 스택과 버전을 기반으로 개발되었습니다:
+
+- **Python**: 3.11
+- **FastAPI**: 최신 버전 (권장: 0.100.0 이상)
+- **LangGraph**: 0.2.5
+- **LangChain**: 0.0.304
+- **Pydantic**: 2.0 이상
+- **Uvicorn**: 0.22.0
+
+추가적으로, 환경 변수 관리를 위해 `.env` 파일을 사용하며, 기본 데이터베이스로 SQLite를 사용합니다.
