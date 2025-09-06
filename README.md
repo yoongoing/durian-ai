@@ -1,2 +1,44 @@
 # durian-ai
 DurianAI is DataLake AI Agent
+
+## 실행 방법
+
+### 1. 의존성 설치
+아래 명령어를 실행하여 프로젝트의 의존성을 설치합니다:
+```bash
+git clone https://github.com/yoongoing/durian-ai.git
+
+uv sync
+```
+
+### 2. 환경 변수 설정
+`durian-ai/.env` 파일을 생성하고, 발급받은 API 키로 아래와 같이 변경해줍니다.
+```bash
+DATABASE_URL=sqlite:///./datalake.db
+
+OPENAI_API_KEY=본인키
+
+LANGSMITH_TRACING=true
+LANGSMITH_API_KEY=본인키
+LANGSMITH_PROJECT=DURIAN-AI
+
+TAVILY_API_KEY=본인키
+
+OPENROUTER_API_KEY=본인키
+OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
+```
+
+### 3. 서버 실행
+먼저 가상환경을 activate 해주고, 그 다음 실행해줍니다.
+```bash
+# MAC OS
+source .venv/bin/activate
+
+uvicorn app.main:app --reload
+```
+
+### 4. API 문서 확인
+서버가 실행된 후, 브라우저에서 아래 URL로 이동하여 API 문서를 확인할 수 있습니다.
+
+* Swagger UI: http://127.0.0.1:8000/docs
+* ReDoc: http://127.0.0.1:8000/redoc
